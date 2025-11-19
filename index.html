@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- CORREÇÃO -->
     <title>Tradutor BH</title>
     <style>
         body {
@@ -13,12 +14,37 @@
             height: 100vh;
             background: linear-gradient(135deg, #f6d365, #fda085);
             margin: 0;
+            padding: 0 10px; /* garante espaçamento nas laterais em telas pequenas */
+            box-sizing: border-box;
         }
-        h1 { color: #fff; text-shadow: 1px 1px 3px #000; }
-        input { padding: 10px; font-size: 18px; width: 300px; border-radius: 8px; border: none; margin-bottom: 10px; }
-        button { padding: 10px 20px; font-size: 18px; border-radius: 8px; border: none; cursor: pointer; transition: 0.3s; }
+        h1 { color: #fff; text-shadow: 1px 1px 3px #000; text-align: center; }
+        input { 
+            padding: 10px; 
+            font-size: 18px; 
+            width: 100%;       /* ajuste para telas pequenas */
+            max-width: 400px;  /* limite para telas grandes */
+            border-radius: 8px; 
+            border: none; 
+            margin-bottom: 10px; 
+            box-sizing: border-box;
+        }
+        button { 
+            padding: 10px 20px; 
+            font-size: 18px; 
+            border-radius: 8px; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        }
         button:hover { background-color: #ffe6cc; }
-        #saida { margin-top: 15px; font-size: 20px; color: #fff; text-shadow: 1px 1px 2px #000; }
+        #saida { 
+            margin-top: 15px; 
+            font-size: 20px; 
+            color: #fff; 
+            text-shadow: 1px 1px 2px #000; 
+            word-break: break-word; /* evita overflow em palavras longas */
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -53,3 +79,4 @@
     </script>
 </body>
 </html>
+
