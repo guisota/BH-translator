@@ -16,7 +16,6 @@
         background: linear-gradient(135deg, #f6d365, #fda085);
         padding: 40px 20px;
         text-align: center;
-        min-height: 100%;
     }
 
     h1 {
@@ -28,7 +27,7 @@
 
     input {
         padding: 12px;
-        font-size: 1rem;
+        font-size: 16px; /* CORREÇÃO: evita zoom */
         width: 100%;
         max-width: 400px;
         border-radius: 8px;
@@ -38,7 +37,7 @@
 
     button {
         padding: 12px 25px;
-        font-size: 1rem;
+        font-size: 16px; /* CORREÇÃO: evita zoom */
         border-radius: 8px;
         border: none;
         cursor: pointer;
@@ -59,7 +58,6 @@
 
     @media (max-width: 350px) {
         h1 { font-size: 1.5rem; }
-        input, button { font-size: 0.9rem; padding: 10px; }
         #saida { font-size: 1rem; }
     }
 </style>
