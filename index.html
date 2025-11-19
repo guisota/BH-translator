@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Tradutor BH</title>
 <style>
     * {
@@ -14,30 +14,31 @@
     body {
         font-family: Arial, sans-serif;
         background: linear-gradient(135deg, #f6d365, #fda085);
-        padding: 40px 20px;
+        padding: 50px 30px; /* mais espaçamento nas bordas */
         text-align: center;
+        min-height: 100vh;
     }
 
     h1 {
         color: #fff;
         text-shadow: 1px 1px 3px #000;
-        font-size: 2rem;
-        margin-bottom: 25px;
+        font-size: 2.5rem; /* texto maior */
+        margin-bottom: 30px;
     }
 
     input {
-        padding: 12px;
-        font-size: 16px; /* CORREÇÃO: evita zoom */
+        padding: 16px; /* maior espaço interno */
+        font-size: 18px; /* texto maior */
         width: 100%;
-        max-width: 400px;
+        max-width: 350px; /* mais pra dentro das bordas */
         border-radius: 8px;
         border: none;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     button {
-        padding: 12px 25px;
-        font-size: 16px; /* CORREÇÃO: evita zoom */
+        padding: 16px 35px; /* maior botão */
+        font-size: 18px; /* texto maior */
         border-radius: 8px;
         border: none;
         cursor: pointer;
@@ -49,16 +50,18 @@
     }
 
     #saida {
-        margin-top: 20px;
-        font-size: 1.2rem;
+        margin-top: 25px;
+        font-size: 1.5rem; /* texto maior */
         color: #fff;
         text-shadow: 1px 1px 2px #000;
         word-break: break-word;
     }
 
+    /* Pequenas telas */
     @media (max-width: 350px) {
-        h1 { font-size: 1.5rem; }
-        #saida { font-size: 1rem; }
+        h1 { font-size: 2rem; }
+        input, button { font-size: 16px; padding: 14px; }
+        #saida { font-size: 1.2rem; }
     }
 </style>
 </head>
@@ -94,3 +97,4 @@ document.getElementById("btn").addEventListener("click", function() {
 </script>
 </body>
 </html>
+
