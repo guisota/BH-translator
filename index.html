@@ -16,10 +16,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        min-height: 100vh;
+        padding: 40px 20px;
         background: linear-gradient(135deg, #f6d365, #fda085);
-        padding: 20px;
+        min-height: 100%;
         text-align: center;
     }
 
@@ -27,7 +26,7 @@
         color: #fff;
         text-shadow: 1px 1px 3px #000;
         font-size: 2rem;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     input {
@@ -54,33 +53,13 @@
     }
 
     #saida {
-        margin-top: 15px;
+        margin-top: 20px;
         font-size: 1.2rem;
         color: #fff;
         text-shadow: 1px 1px 2px #000;
         word-break: break-word;
     }
 
-    /* Ajustes extras para telas muito pequenas */
     @media (max-width: 350px) {
         h1 { font-size: 1.5rem; }
-        input, button { font-size: 0.9rem; padding: 10px; }
-        #saida { font-size: 1rem; }
-    }
-</style>
-</head>
-<body>
-<h1>Tradutor BH</h1>
-<input id="entrada" placeholder="Digite o texto">
-<button id="btn">Traduzir</button>
-<p id="saida"></p>
-
-<script>
-function traduzir_bh(texto) {
-    let resultado = "";
-    for (let i = 0; i < texto.length; i++) {
-        let letra = texto[i];
-        if (/[a-zA-Z]/.test(letra)) {
-            let codigo = letra.charCodeAt(0);
-            if (le
-
+        input,
